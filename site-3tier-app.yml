@@ -13,7 +13,7 @@
     - {name: base-config, tags: base-config}
     - {name: lb-tier, tags: [lbs, haproxy]}
 
-# Setup application servers tier
+## Setup application servers tier
 
 - name: setup app tier
   hosts: apps

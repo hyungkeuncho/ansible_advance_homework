@@ -3,7 +3,7 @@
   hosts: frontends
   become: yes
   roles:
-    - {name: base-config, tags: base-config}
+    - {name: aws_base_config, tags: aws_base_config}
     - {name: lb-tier, tags: [lbs, haproxy]}
 
 ## Setup application servers tier
@@ -12,7 +12,7 @@
   become: yes
   gather_facts: false
   roles:
-    - {name: base-config, tags: base-config}
+    - {name: aws_base_config, tags: aws_base_config}
     - {name: app-tier, tags: [apps, tomcat]}
 
 # Setup database tier
@@ -20,5 +20,5 @@
   become: yes
   hosts: appdbs
   roles:
-    - {name: base-config, tags: base-config}
+    - {name: aws_base_config, tags: aws_base_config}
     - {name: db-tier, tags: [dbs, postgres]}

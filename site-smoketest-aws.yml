@@ -6,7 +6,7 @@
       url: "http://{{ item }}"
       return_content: yes
     with_items:
-      - "This is {{ inventory_hostname }} page."
+      - "{{ inventory_hostname }}"
     register: webpage
   - name: Fail if 'Ansible has done its job' is not in the page content
     fail:

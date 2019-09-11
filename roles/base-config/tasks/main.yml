@@ -10,7 +10,7 @@
 - name: enable repos
   template:
     src: internal.repo
-    dest: /etc/yum.repos.d/internal.repo
+    dest: /etc/yum.repos.d/internal_aws.repo
     mode: 0644
 
 - name: install base tools and packages

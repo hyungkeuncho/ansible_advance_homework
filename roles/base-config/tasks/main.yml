@@ -9,13 +9,13 @@
 
 - name: enable repos
   template:
-    src: internal.repo
-    dest: /etc/yum.repos.d/internal_aws.repo
+    src: internal_aws.repo
+    dest: /etc/yum.repos.d/internal.repo
     mode: 0644
 
 - name: install base tools and packages
   yum:
     name:
-      - "python2-httpie"
-      - "rh-python36-python-pip"
+      - httpie
+      - python-pip
     state: latest

@@ -1,4 +1,4 @@
-- hosts: workstation
+- hosts: frontends
   gather_facts: false
   tasks:
   - name: OpenStack servers

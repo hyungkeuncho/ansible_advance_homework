@@ -16,6 +16,6 @@
 - name: install base tools and packages
   yum:
     name:
-      - "python2-httpie"
-      - "rh-python36-python-pip"
+      - httpie
+      - python-pip
     state: latest
